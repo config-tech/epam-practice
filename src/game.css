@@ -36,6 +36,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background: #2C2C2C;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -69,7 +70,7 @@ select {
 }
 /* end сброс стилей */
 .hidden{
-  /* display: none; */
+  display: none;
 }
 .bg-main {
   background: #2C2C2C;
@@ -213,6 +214,7 @@ select {
   display: flex;
   flex-direction: row;
   margin-top: 30px;
+  padding-bottom: 20px;
 }
 .bg-main .footer-block .btn-border {
   display: block;
