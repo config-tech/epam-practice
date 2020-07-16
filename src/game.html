@@ -4,18 +4,72 @@
     <meta charset="UTF-8">
     <title>study game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="game.css" type="text/css">
     <!--  TODO: Раскомментировать при начале работы с сервером -->
-<!--    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />-->
-<!--    <link rel="stylesheet" href="/css/bootstrap-theme.css" type="text/css" />-->
+    <!-- <link rel="stylesheet" href="http://104.40.150.146/css/bootstrap.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="http://104.40.150.146/css/bootstrap-theme.css" type="text/css" /> -->
 
-    <!--  TODO: Закомментировать при начале работы с сервером -->
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
-<!--          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+     <!-- TODO: Закомментировать при начале работы с сервером  -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <link rel="stylesheet" href="game.css" type="text/css">
 </head>
 <body>
 <!-- TODO: Task 0. Построить вёрстку приложения по макету
           используя для сетки bootstrap -->
+
+          <div class="container-fluid game-container bg-main">
+              <div class="top-block">
+                    <div class="block-wrapper">
+                        <span class="digit">
+                            123
+                        </span>
+                        <a class="bg-yellow">открыта регистрация</a>
+                    </div>
+              </div>
+              <div class="clock">
+                  <span class="clocks">00:00</span>
+              </div>
+              <div class="map-block">
+                  <div class="map-block-wrapper">
+                      <div class="common-container">
+                        <div class="police-wrapper">
+                          <div class="police-header">
+                              Синяки полиция
+                          </div>
+                          <div class="lifes-and-coins">
+                              <span>Жизни: <span class="bg-red">3</span></span>
+                              <span>Монеты: <span class="bg-yellow">0</span></span>
+                          </div>
+                          <div class="police-footer">
+                              <span class="bg-yellow">undefined</span>
+                              <span class="bg-red">undefined</span>
+                              <span class="bg-black">undefined</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="map">
+                          <img src="map.png" alt="Карта">
+                      </div>
+                      <div class="common-container">
+                        <div class="thief-wrapper">
+                          <div class="thief-header">
+                              Курилки мошенники
+                          </div>
+                          <div class="lifes-and-coins">
+                              <span>Жизни: <span class="bg-red">3</span></span>
+                              <span>Монеты: <span class="bg-yellow">0</span></span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="footer-block">
+                  <a href="#" class="btn-border">К списку игр</a>
+                  <a href="#" class="btn-border">Начать игру</a>
+                  <a href="#" class="btn-border">Покинуть игру</a>
+                  <a href="#" class="btn-border red">Прервать игру</a>
+                  
+              </div>
+          </div>
 
 <div class="hidden">
     <img id="img_heart"
@@ -92,17 +146,17 @@ B5Mj0iMjEiIC8+CjxsaW5lIHgxPSIyMiIgeTE9IjE3IiB4Mj0iMTgiIHkyPSIyMSIgLz4KPC9nP
 go8L3N2Zz4="/>
 </div>
 <script src="modernizr.js" type="text/javascript"></script>
-<script src="/js/jquery.js" type="text/javascript"></script>
-<script src="/js/jquery.signalR.js" type="text/javascript"></script>
+<script src="http://104.40.150.146/js/jquery.js" type="text/javascript"></script>
+<script src="http://104.40.150.146/js/jquery.signalR.js" type="text/javascript"></script>
 <!-- TODO: Раскомментировать при начале работы с сервером -->
-<!--<script src="/js/bootstrap.js" type="text/javascript"></script>-->
-<script src="/js/gameApi.js" type="text/javascript"></script>
+<script src="http://104.40.150.146/js/bootstrap.js" type="text/javascript"></script>
+<script src="http://104.40.150.146/js/gameApi.js" type="text/javascript"></script>
 <!-- TODO: Раскомментировать при начале работы с сервером -->
-<!--<script src="sugar-1.4.1.min.js" type="text/javascript"></script>-->
+<script src="sugar-1.4.1.min.js" type="text/javascript"></script>
 <script src="constants.js" type="text/javascript"></script>
 <script src="utils.js" type="text/javascript"></script>
 <script src="gameController.js" type="text/javascript"></script>
 <!-- TODO: Раскомментировать при начале работы с сервером -->
-<!--<script src="game.js" type="text/javascript"></script>-->
+<script src="game.js" type="text/javascript"></script>
 </body>
 </html>
