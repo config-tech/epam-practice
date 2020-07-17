@@ -1,243 +1,184 @@
-/* Сброс стилей */
-/* Указываем box sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.hidden {
+    display: none;
 }
 
-/* Убираем внутренние отступы */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-/* Убираем внешние отступы */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Выставляем основные настройки по-умолчанию для body */
 body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  background: #2C2C2C;
+    background-color: #696969;
 }
 
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-ol[class] {
-  list-style: none;
+.game-statistic-blue .game-player-name {
+    color: #0017bc;
 }
 
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+.game-statistic-yellow .game-player-name {
+  color: #fbff0d;
 }
 
-/* Упрощаем работу с изображениями */
-img {
-  max-width: 100%;
+.game-player-status-ad:before {
+    content: '(отк.)';
+}
+
+.map-canvas {
+    display: flex;
+    justify-content: center;
+}
+
+.game-timer-warn {
+  color: #FFA600;
+}
+.game-timer-cri {
+  color: red;
+}
+
+.badge {
+    background-color: darkgoldenrod;
+    vertical-align: super;
+}
+
+.game-caption-status-0,
+.game-caption-status-1 {
+  background-color: #FFCC00;
+}
+.game-caption-status-2,
+.game-caption-status-3,
+.game-caption-status-4 {
+  background-color: #1C8A00;
+}
+.game-caption-status-5 {
+  background-color: #660000;
+}
+.game-caption-status-6 {
+  background-color: #0099ff;
+}
+
+.options {
+    padding: 20px;
+}
+
+.button-default {
+    background-color: inherit;
+    color: gray;
+    border: 2px solid gray;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.button-red {
+    color: red;
+    border: 2px solid red;
+}
+
+.game-name {
+    background-color: gray;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.game-statistics {
+    background-color: grey;
+    border-radius: 8px;
+    font-size: 19px;
+    padding-inline-start: 0;
+    color: black;
+  width: 100%;
+}
+
+.game-statistics li {
+    list-style-type: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.coin-bage {
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+.life-bage {
+    background-color: red;
+    border: 1px solid black;
+}
+
+.game-statistic-blue {
+    border: 2px solid #0000CD;
+}
+
+.game-statistic-blue > li:first-child {
+    background-color: #0000CD;
+    color: rgb(187, 187, 187);
+}
+
+.game-statistic-yellow {
+    border: 2px solid yellow;
+}
+
+.game-statistic-yellow > li:first-child {
+    background-color: yellow;
+    color: black;
+}
+
+.timer {
+    color: gray;
+    text-align: center;
+    font-size: 40px;
+}
+
+.container {
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #2C2C2C;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-box-shadow: 4px 6px 5px 0px rgb(68, 68, 68);
+    -moz-box-shadow: 4px 6px 5px 0px rgb(68, 68, 68);
+    box-shadow: 4px 6px 5px 0px rgb(68, 68, 68);
+}
+
+/* loader */
+.lds-ring {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
   display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
 }
-
-/* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
-  margin-top: 1em;
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
 }
-
-/* Наследуем шрифты для инпутов и кнопок */
-input,
-button,
-textarea,
-select {
-  font: inherit;
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
 }
-/* end сброс стилей */
-.hidden{
-  display: none;
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
 }
-.bg-main {
-  background: #2C2C2C;
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-.bg-yellow {
-  background: gold;
-  color: #000;
-  font-size: 12px;
-  border-radius: 5px;
-  padding: 5px;
-}
-.bg-red {
-  background: red;
-  color: #000;
-  font-size: 12px;
-  border-radius: 5px;
-  padding: 5px;
-}
-.bg-black {
-  background: #000;
-  color: #fff;
-  border: 2px solid #fff;
-  font-size: 12px;
-  border-radius: 5px;
-  padding: 5px;
-}
-
-.container-fluid {
-  padding: 20px;
-}
-
-.bg-main .top-block .block-wrapper {
-  background: rgba(136, 136, 136, 0.5);
-  padding: 15px;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-}
-.bg-main .top-block .block-wrapper .digit {
-  color: #888888;
-  font-size: 25px;
-  margin-right: 15px;
-}
-.bg-main .top-block .block-wrapper .bg-yellow {
-  color: #000;
-  font-size: 16px;
-  border-radius: 10px;
-  padding: 5px 10px;
-  background-color: gold;
-}
-.bg-main .top-block .block-wrapper .bg-yellow:hover {
-  text-decoration: none;
-}
-
-.bg-main .clock {
-  text-align: center;
-  margin-top: 30px;
-}
-.bg-main .clock .clocks {
-  color: #888888;
-  font-size: 50px;
-  line-height: 1;
-}
-
-.bg-main .map-block {
-  display: flex;
-  margin-top: 30px;
-}
-
-.bg-main .map-block .map-block-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex: 1 1 auto;
-}
-
-.bg-main .map-block .map-block-wrapper .common-container {
-  display: block;
-}
-.bg-main .map-block .map-block-wrapper .common-container .police-wrapper {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid dodgerblue;
-  border-radius: 10px;
-}
-.bg-main .map-block .map-block-wrapper .common-container .thief-wrapper {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid gold;
-  border-radius: 10px;
-}
-
-
-.bg-main .map-block .map-block-wrapper .common-container .police-header {
-  background: dodgerblue;
-  padding: 5px 15px;
-}
-.bg-main .map-block .map-block-wrapper .common-container .thief-wrapper .thief-header {
-  background: gold;
-  border: 2px solid gold;
-  padding: 5px 15px;
-}
-
-.bg-main .map-block .map-block-wrapper .common-container .lifes-and-coins {
-  color: #888888;
-  display: flex;
-  flex-direction: column;
-  padding: 5px 15px;
-}
-
-.bg-main .map-block .map-block-wrapper .common-container .lifes-and-coins span {
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center;
-}
-
-.bg-main .map-block .map-block-wrapper .common-container .lifes-and-coins span:last-child {
-  margin-bottom: 0;
-}
-
-.bg-main .map-block .map-block-wrapper .common-container .lifes-and-coins span span.bg-red, span.bg-yellow {
-  border: 2px solid #000;
-  margin-right: 0;
-  margin-left: auto;
-}
-.bg-main .map-block .map-block-wrapper .common-container .police-footer {
-  background: rgba(255, 99, 71, 0.5);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px; 
-}
-.bg-main .map-block .map-block-wrapper .common-container .police-footer span {
-  margin-right: 15px;
-}
-.bg-main .map-block .map-block-wrapper .common-container .police-footer span:last-child {
-  margin-right: 0;
-}
-
-.bg-main .footer-block {
-  display: flex;
-  flex-direction: row;
-  margin-top: 30px;
-  padding-bottom: 20px;
-}
-.bg-main .footer-block .btn-border {
-  display: block;
-  color: #888888;
-  font-size: 16px;
-  border: 2px solid #888888;
-  padding: 5px 15px;
-  border-radius: 5px;
-  margin-right: 15px;
-  background: transparent;
-}
-.bg-main .footer-block .btn-border.red {
-  border: 2px solid #ff0000;
-  color: #ff0000;
-}
-.bg-main .footer-block .btn-border.blue {
-  border: 2px solid dodgerblue;
-  color: dodgerblue;
-}
-.bg-main .footer-block .btn-border.yellow {
-  border: 2px solid gold;
-  color: gold;
-}
-/* .bg-main .footer-block .btn-border:hover {
-  text-decoration: none;
-} */
