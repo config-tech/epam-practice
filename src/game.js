@@ -5,42 +5,42 @@
  *  Для получения доступа к DOM элементу следует
  *  использовать document.getElementById('elementId')
  */
-/*
-$containerGame
-$loading
-$error
 
-$mapCanvas
-$gameCaption
-$switchTimer
-$team1Container
-$team1Caption
-$team1Players
-$team1Lives
-$team1Coins
-$team2Container
-$team2Caption
-$team2Players
-$team2Lives
-$team2Coins
+const $containerGame = document.getElementById("containerGame");
+let $loading;
+let $error;
 
-$btnGameList
-$btnStart
-$btnConnect
-$btnConnectPolice
-$btnConnectThief
-$btnLeave
-$btnPause
-$btnCancel
+const $mapCanvas = document.getElementById("mapCanvas");
+let $gameCaption;
+const $switchTimer = document.getElementById("timer");
+const $team1Container = document.getElementById("police");
+const $team1Caption = document.getElementById("policeCaption"); 
+let $team1Players;
+const $team1Lives = document.getElementById("policeLives");
+const $team1Coins = document.getElementById("policeCoins");
+const $team2Container = document.getElementById("thieves");
+const $team2Caption = document.getElementById("thievesCaption");
+let $team2Players;
+const $team2Lives = document.getElementById("thievesLives");
+const $team2Coins = document.getElementById("thievesCoins"); 
 
-$imgHeart
-$imgCoin
-$imgPolice
-$imgPoliceSelf
-$imgThief
-$imgThiefSelf
-$imgSwitch
- */
+const $btnGameList = document.getElementById("btnGameList");
+const $btnStart = document.getElementById("startBtn");
+const $btnConnect = document.getElementById("btnConnect");
+const $btnConnectPolice = document.getElementById("btnConnectPolice");
+const $btnConnectThief = document.getElementById("btnConnectThief");
+const $btnLeave = document.getElementById("leaveBtn");
+const $btnPause = document.getElementById("btnPause");
+const $btnCancel = document.getElementById("cancelBtn");
+
+const $imgHeart = document.getElementById("img_heart");
+const $imgCoin = document.getElementById("img_coin");
+const $imgPolice = document.getElementById("img_police");
+const $imgPoliceSelf = document.getElementById("img_police_self");
+const $imgThief = document.getElementById("img_thief");
+const $imgThiefSelf = document.getElementById("img_thief_self");
+const $imgSwitch = document.getElementById("img_switch");
+
 
 // ...
 
@@ -72,11 +72,14 @@ $imgSwitch
                 };
             }
 
-            function setMapCanvasSizing($canvas, width, height) {
+            function setMapCanvasSizing($сanvas, width, height) {
                 /**
                  * TODO Task 2. Опишите функцию которая задаст размеры игрового поля
                  */
-                return $canvas;
+                $canvas.width = width;
+                $canvas.height = height;
+
+                return $сanvas;
             }
 
             function drawMapField(canvas, map, width, height, cellSize) {

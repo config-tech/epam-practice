@@ -224,11 +224,20 @@ select {
   padding: 5px 15px;
   border-radius: 5px;
   margin-right: 15px;
+  background: transparent;
 }
 .bg-main .footer-block .btn-border.red {
   border: 2px solid #ff0000;
   color: #ff0000;
 }
-.bg-main .footer-block .btn-border:hover {
-  text-decoration: none;
+.bg-main .footer-block .btn-border.blue {
+  border: 2px solid dodgerblue;
+  color: dodgerblue;
 }
+.bg-main .footer-block .btn-border.yellow {
+  border: 2px solid gold;
+  color: gold;
+}
+/* .bg-main .footer-block .btn-border:hover {
+  text-decoration: none;
+} */
