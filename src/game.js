@@ -337,7 +337,7 @@ const $imgHeart = document.getElementById('img_heart'),
          * ПОМЕНЯТЬ ПОД GAME-CAPTION
          */
         utils.reWriteDomElement(
-          this.game.$gameCaption, `${name} <span class='badge game-caption-status-${status}'>${utils.getStatusName(status)}</span>`,
+          this.game.$gameCaption, `${name} <span class='badge game-caption-status-${status}'>${utils.getStatusName(status)}</span>`
         );
       };
       GameView.prototype.setTimer = function (data) {
